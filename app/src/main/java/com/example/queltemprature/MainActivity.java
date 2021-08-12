@@ -1,7 +1,5 @@
 package com.example.queltemprature;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,27 +12,43 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageView suprimer;
     private EditText edit;
-    private int                      i;
-    private int                      nbr;
-    private int                      valeur;
+    private int i;
+    private int nbr;
+    private int valeur;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private RelativeLayout Relative;
     private TextView vraie, faux;
     private Button oui;
 
-    private Button   non;
-    private Button   verifier;
+    private Button non;
+    private Button verifier;
     private TextView rejouer;
-    private long     departd;
+    private long departd;
     private TextView record;
 
+//
+//
+//    essai dadresse ip pour la meteo, mais ça marche pas
+//    private static InetAddress ip;
+//
+//    public static void main(String args[]) throws Exception
+//    {
+//         ip = InetAddress.getLocalHost();
+//
+//        System.out.print("Mon adresse IP est: ");
+//        System.out.println(ip.getHostAddress());
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,19 +56,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sharedPreferences = getPreferences(MODE_PRIVATE);
-        editor            = sharedPreferences.edit();
+        editor = sharedPreferences.edit();
 
 
-        edit     = findViewById(R.id.edit);
+//         adresse = ip.getHostAddress();
+        //
+        edit = findViewById(R.id.edit);
+
         suprimer = findViewById(R.id.suprimer);
         Relative = findViewById(R.id.Relative);
-        vraie    = findViewById(R.id.vraie);
-        faux     = findViewById(R.id.faux);
-        oui      = findViewById(R.id.oui);
-        non      = findViewById(R.id.non);
-        record   = findViewById(R.id.record);
+        vraie = findViewById(R.id.vraie);
+        faux = findViewById(R.id.faux);
+        oui = findViewById(R.id.oui);
+        non = findViewById(R.id.non);
+        record = findViewById(R.id.record);
         verifier = findViewById(R.id.verifier);
         rejouer = findViewById(R.id.rejouer);
+//
+//
+//        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+//        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+//        double longitude = location.getLongitude();
+//        double latitude = location.getLatitude();
 
         suprimer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +139,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void temperature(int code) {
+
+//        https://api.meteo-concept.com/api/ephemeride/0?token=111f1a052d3a50dbecf81f4b802982cfd5023d875f5c284c5a47bbbe6fa86aee
+
+
+    }
+
     private void etat2() {
         faux.setVisibility(View.INVISIBLE);
         vraie.setVisibility(View.VISIBLE);
@@ -133,11 +163,11 @@ public class MainActivity extends AppCompatActivity {
 
         float temps1 = (float) ((float) (find - departd) / 1000.);
         int tempsmin = (int) ((float) (find - departd) / 60000);
-        float tempss = (temps1-tempsmin*60000/1000);
+        float tempss = (temps1 - tempsmin * 60000 / 1000);
 
 
         if (temps1 > 60) {
-            vraie.setText(getString(R.string.nbrtrouveplusuneminutes,i, tempsmin,tempss));
+            vraie.setText(getString(R.string.nbrtrouveplusuneminutes, i, tempsmin, tempss));
         } else {
             vraie.setText(getString(R.string.nbrtrouvee, i, temps1));
         }
@@ -155,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         tempsRecord = sharedPreferences.getFloat("s", Float.MAX_VALUE);
 
         float temps;
-        find  = System.currentTimeMillis();
+        find = System.currentTimeMillis();
         temps = (float) ((float) (find - departd) / 1000.);
 
         if (temps < tempsRecord) {
@@ -281,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
         Random r = new Random();
 
         valeur = r.nextInt(51);
-        i      = 0;
+        i = 0;
 
         departd = System.currentTimeMillis();
 
