@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:text="@string/titre"
+        android:textAlignment="center"
+
+        />
+
+    <ImageView
+        android:id="@+id/suprimer"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="75sp"
+        android:layout_marginRight="10sp"
+        app:srcCompat="@mipmap/delete" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75sp"
+        android:hint="@string/edit"
+        android:inputType="number"
+
+        android:minHeight="48dp" />
+
+
+    <Button
+        android:id="@+id/verifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:background="@drawable/round_button"
+        android:text="@string/verifier" />
+
+    <TextView
+        android:id="@+id/faux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verifier"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:textColor="@color/rouge"
+        android:textAlignment="center"
+
+        />
+
+    <TextView
+        android:id="@+id/vraie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/faux"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:textColor="@color/vert"
+        android:textAlignment="center"
+        android:layout_marginRight="25sp"
+        android:layout_marginLeft="25sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/Relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vraie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        >
+
+        <TextView
+            android:id="@+id/rejouer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="9"
+            android:orientation="horizontal"
+            android:layout_below="@id/rejouer"
+            >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/oui"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_button"
+                android:text="@string/oui"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/non"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_button"
+                android:text="@string/non"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Relative"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="25sp"
+        android:textColor="@color/vert"
+        android:layout_marginRight="25sp"
+        android:layout_marginLeft="25sp"
+        />
+
+</RelativeLayout>

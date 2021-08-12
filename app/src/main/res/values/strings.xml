@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Guess a temperature</string>
+    <string name="titre">Guess a temperature between 0 and 50° because (it\'s hot)</string>
+    <string name="edit">Enter a temperature</string>
+    <string name="verifier">Check</string>
+    <string name="nbrplusgrand">The temperature sought is higher</string>
+    <string name="nbrpluspetit">The temperature sought is smaller</string>
+    <string name="nbrtrouvee">Well done, you found the temperature in %d moves and %.2f s!</string>
+    <string name="reccordcoups">Well done, you beat your hit records !</string>
+    <string name="reccordtemps">Well done, you beat your time record !</string>
+    <string name="reccordCoupEtTemps">Well done, you have beaten your stroke and time record !</string>
+    <string name="suprreccord">/ !  Do you want to delete all your records?</string>
+    <string name="oui">Yes</string>
+    <string name="non">No</string>
+    <string name="rejouer">Try again?</string>
+    <string name="nbrtrouveplusuneminutes">Well done, you found the temperature in %d moves and %d min et %.2f s !</string>
+    <string name="rentreunnombre">"hey ho potato >:0 enter a temperature  =^= "</string>
+    <string name="entreunnbrcorecte">hey potato >:o I told you between 0 and 50 °  >:c</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Devine la température </string>
+    <string name="titre">Devine un la température  entre 0 et 50 ° (car il fait chaud)</string>
+    <string name="edit">Entrez une températue </string>
+    <string name="verifier">Vérifier</string>
+    <string name="nbrplusgrand">La température recherchée est plus grand</string>
+    <string name="nbrpluspetit">La température recherchée est plus petit</string>
+    <string name="nbrtrouvee">Bravo, vous avez trouvé la température en %d coups et %.2f s!</string>
+    <string name="reccordcoups">Bravo, vous avez battu votre records de coups !</string>
+    <string name="reccordtemps">Bravo, vous avez battu votre record de temps !</string>
+    <string name="reccordCoupEtTemps">Bravo, vous avez battu votre record de coups et de temps !</string>
+    <string name="suprreccord">/ !  Voulez-vous suprimer tout vos reccords?</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="rejouer">Voulez-vous rejouer?</string>
+    <string name="nbrtrouveplusuneminutes">Bravo, vous avez trouvé la température en %d coups et %d min et %.2f s !</string>
+    <string name="rentreunnombre">hé ho patate >:0 rentre une température  =^=</string>
+    <string name="entreunnbrcorecte">hé patate>:o je t\'ai dit entre 0 et 50 °  >:c</string>
+</resources>
